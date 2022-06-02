@@ -1,6 +1,7 @@
-import { render } from '@testing-library/react';
 import React from 'react';
 import Navigator from './Navigator';
+import Book from './Book';
+import AddNewBook from './AddNewBook';
 
 export default function Books() {
   const booksArray = [
@@ -22,21 +23,19 @@ export default function Books() {
       title: 'Capital in the Twenty-First Century',
       author: 'Suzanne Collins',
     },
-  ]
+  ];
 
-  render() {
-    return (
-      <div>
-        <Navigator />
-        <h1>Books</h1>
-        {booksArray.map((book) => (
-          <li key={book.id}>
-            <span>{book.topic}</span>
-            <span>{book.title}</span>
-            <span>{book.author}</span>
-          </li>
-        ))}
-      </div>
-    );
-  }
+  const handleSubmit = () => {};
+
+  return (
+    <div>
+      <Navigator />
+      {booksArray.map((book) => (
+        <div key={book.id} className="book-section">
+          <Book topic={book.topic} title={book.title} author={book.author} />
+        </div>
+      ))}
+      <AddNewBook onSubmit={handleSubmit} />
+    </div>
+  );
 }

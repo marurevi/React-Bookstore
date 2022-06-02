@@ -6,8 +6,8 @@ export default function Navigator() {
   return (
     <nav>
       <img src={image} alt="" />
-      <Link to="/">Books</Link>
-      <Link to="/categories">Categories</Link>
+      <Link to="/">BOOKS</Link>
+      <Link to="/categories">CATEGORIES</Link>
     </nav>
   );
 }

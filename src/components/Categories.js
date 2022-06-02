@@ -6,6 +6,7 @@ export default function Categories() {
     <div>
       <Navigator />
       <h1>Categories</h1>
+      <button type="button">CHECK STATUS</button>
     </div>
   );
 }
