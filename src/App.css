@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  text-underline-offset: 6px;
+  font-weight: bold;
+  padding: 2em;
+}
+nav >* {
+  margin: 0 2em;
+  color: whitesmoke;
+}
+img {
+  width: 5em;
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  justify-self: flex-start;
+}
