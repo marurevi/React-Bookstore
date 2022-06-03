@@ -31,6 +31,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can clone the repository with the following link:
 `https://github.com/marurevi/React-Bookstore.git`
+
  Once you have clone the repository run:
  `npm install`
  to install all the dependencies that you need.
