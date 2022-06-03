@@ -9,6 +9,13 @@ export default function Book(props) {
         <li>{topic}</li>
         <li>{title}</li>
         <li>{author}</li>
+        <li className="btn-container">
+          <button type="button" disabled>COMENTS</button>
+          |
+          <button type="button" disabled>REMOVE</button>
+          |
+          <button type="button" disabled>EDIT</button>
+        </li>
       </ul>
       <button type="button">UPDATE PROGRESS</button>
     </div>

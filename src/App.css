@@ -63,3 +63,18 @@ select {
   padding: 0.7em;
   margin-right: 2em;
 }
+
+.btn-container {
+  display: flex;
+  align-items: center;
+}
+
+.btn-container button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: rgb(37, 89, 179);
+  padding: 0;
+  margin: 0.6em;
+  width: auto;
+}
