@@ -11,7 +11,7 @@
 >By building this application, you will learn how to use React and Redux.
 >You will need to build a website with two subpages: "Books" and "Categories." However, you will only need to implement the "Books" part (see the image below). The "Categories" page will stay empty in this MVP.
 <p align="center">
-  <img src="https://raw.githubusercontent.com/microverseinc/curriculum-react-redux/main/bookstore/images/bookstore.png?token=GHSAT0AAAAAABQBCGV5GZEC4MS3ONIY5JMWYUY7AUQ" alt="Core elements" width="450px"  />
+  <img src="https://github.com/microverseinc/curriculum-react-redux/raw/main/bookstore/images/bookstore.png" alt="Core elements" width="450px"  />
 </p>
 
 ## Built With
