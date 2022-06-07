@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Bookstore
+# Bookstore: add reducers and actions
 
 >The Bookstore is a website similar to the "Awesome Books" website built in the previous module. You will create an MVP version of it that allows you to:
 
@@ -8,8 +8,8 @@
 - Add a book.
 - Remove a selected book.
 
->By building this application, you will learn how to use React and Redux.
->You will need to build a website with two subpages: "Books" and "Categories." However, you will only need to implement the "Books" part (see the image below). The "Categories" page will stay empty in this MVP.
+>In this step, I configured my Redux Store and write actions and reducer for adding and removing books.
+
 <p align="center">
   <img src="https://github.com/microverseinc/curriculum-react-redux/raw/main/bookstore/images/bookstore.png" alt="Core elements" width="450px"  />
 </p>

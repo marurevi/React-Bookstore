@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 nav {
   display: flex;
   justify-content: flex-start;
@@ -18,8 +20,14 @@ nav > *:focus {
   color: black;
 }
 
-img {
-  width: 5em;
+.Bookstore-CMS {
+  width: 15rem;
+  height: 2.313rem;
+  margin: 0.375rem 2.938rem 0.125rem 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.875rem;
+  font-weight: bolder;
+  color: #0290ff;
 }
 
 .book-section {
