@@ -25,7 +25,7 @@ export default function Books() {
     },
   ];
 
-  const handleSubmit = () => {};
+  const handleSubmit = () => { console.log('click'); };
 
   return (
     <div>
