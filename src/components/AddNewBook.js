@@ -42,7 +42,7 @@ export default function AddNewBook() {
     <div className="newTask-container">
       <h2>ADD NEW BOOK</h2>
       <form onSubmit={handleSubmit}>
-        <input type="text" name="addNew" placeholder="Book Title" onChange={handleTitleChange} />
+        <input type="text" name="addNew" placeholder="Book Title" onChange={handleTitleChange} required />
         <select name="author" onChange={handleAuthorChange}>
           <option value="" defaultValue>Author</option>
           <option value="Susan Collins">Susan Collin</option>
