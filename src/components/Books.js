@@ -1,41 +1,22 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import Navigator from './Navigator';
 import Book from './Book';
 import AddNewBook from './AddNewBook';
 
 export default function Books() {
-  const booksArray = [
-    {
-      id: 1,
-      topic: 'Action',
-      title: 'The Hunger Games',
-      author: 'Suzanne Collins',
-    },
-    {
-      id: 2,
-      topic: 'Science Fiction',
-      title: 'Dune',
-      author: 'Frank Herbert',
-    },
-    {
-      id: 3,
-      topic: 'Economy',
-      title: 'Capital in the Twenty-First Century',
-      author: 'Suzanne Collins',
-    },
-  ];
-
-  const handleSubmit = () => {};
+  const booksArray = useSelector((state) => state.reducerB);
 
   return (
     <div>
       <Navigator />
       {booksArray.map((book) => (
-        <div key={book.id} className="book-section">
-          <Book topic={book.topic} title={book.title} author={book.author} />
+        <div key={uuidv4()} className="book-section">
+          <Book category={book.category} title={book.title} author={book.author} id={book.id} />
         </div>
       ))}
-      <AddNewBook onSubmit={handleSubmit} />
+      <AddNewBook />
     </div>
   );
 }
