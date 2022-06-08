@@ -3,17 +3,10 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteBook } from '../redux/books/books';
 
-export default function Book(props) {
-  const {
-    id, category, title, author,
-  } = props;
-
-  const onClickRemove = (e) => {
-    e.preventDefault();
-    const dispatch = useDispatch();
-    dispatch(deleteBook(e.target.id));
-    console.log('Book file: ', 'id de props:', id, '\n', 'id de button:', e.target.id);
-  };
+export default function Book({
+  id, category, title, author,
+}) {
+  const dispatch = useDispatch();
 
   return (
     <div className="container">
@@ -24,7 +17,7 @@ export default function Book(props) {
         <li className="btn-container">
           <button type="button" disabled>COMENTS</button>
           |
-          <button type="button" onClick={onClickRemove} id={id}>REMOVE</button>
+          <button type="button" onClick={() => dispatch(deleteBook(id))} id={id}>REMOVE</button>
           |
           <button type="button" disabled>EDIT</button>
         </li>

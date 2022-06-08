@@ -34,9 +34,7 @@ export default function reducer(state = books, action = {}) {
       ];
 
     case DELETE:
-      return [
-        books.map((book) => book.id !== action.id),
-      ];
+      return [...books.filter((book) => (book.id !== action.id))];
 
     default:
       return state;
