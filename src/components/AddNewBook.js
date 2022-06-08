@@ -12,6 +12,7 @@ export default function AddNewBook() {
   const clearInput = () => {
     setTitle('');
     setAuthor('');
+    setCategory('');
   };
 
   const handleSubmit = (e) => {

@@ -1,22 +1,24 @@
+import { v4 as uuidv4 } from 'uuid';
+
 // Actions
 const ADDNEW = 'bookstore/books/ADDNEW';
 const DELETE = 'bookstore/books/REMOVE';
 const books = [
   {
-    id: 1,
-    topic: 'Action',
+    id: uuidv4(),
+    category: 'Action',
     title: 'The Hunger Games',
     author: 'Suzanne Collins',
   },
   {
-    id: 2,
-    topic: 'Science Fiction',
+    id: uuidv4(),
+    category: 'Science Fiction',
     title: 'Dune',
     author: 'Frank Herbert',
   },
   {
-    id: 3,
-    topic: 'Economy',
+    id: uuidv4(),
+    category: 'Economy',
     title: 'Capital in the Twenty-First Century',
     author: 'Suzanne Collins',
   },

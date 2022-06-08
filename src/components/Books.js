@@ -6,17 +6,16 @@ import AddNewBook from './AddNewBook';
 
 export default function Books() {
   const booksArray = useSelector((state) => state.reducerB);
-  const handleSubmit = () => { console.log('click'); };
 
   return (
     <div>
       <Navigator />
       {booksArray.map((book) => (
         <div key={book.id} className="book-section">
-          <Book category={book.category} title={book.title} author={book.author} />
+          <Book category={book.category} title={book.title} author={book.author} id={book.id} />
         </div>
       ))}
-      <AddNewBook onSubmit={handleSubmit} />
+      <AddNewBook />
     </div>
   );
 }
