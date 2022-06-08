@@ -29,12 +29,12 @@ export default function reducer(state = books, action = {}) {
   switch (action.type) {
     case ADDNEW:
       return [
-        ...books,
+        ...state,
         action.book,
       ];
 
     case DELETE:
-      return [...books.filter((book) => (book.id !== action.id))];
+      return [...state.filter((book) => (book.id !== action.id))];
 
     default:
       return state;
