@@ -6,9 +6,23 @@ const getApiData = async () => {
   const response = await fetch(urlAPI, {
     method: 'GET',
   });
-  const res = response.json();
-  return res;
+  const res = await response.json();
+  const data = []; 
+  if (res) {
+    res.map((key, value) => {
+    const id = `${key}`;
+    const category = `${value[0].category}`;
+    const title = `${value[0].title}`;
+    const author = `${value[0].author}`;
+    data.push({
+      id, category, title, author,
+    });
+  });
+  }
+  return data;
 };
+
+// getApiData();
 
 const addApiData = async (book) => {
   const response = await fetch(urlAPI, {
@@ -25,11 +39,11 @@ const addApiData = async (book) => {
 };
 
 const deleteApiData = async (id) => {
-  const response = await fetch(urlAPI + id, {
+  const response = await fetch(urlAPI + ID, {
     method: 'DELETE',
-    body: {
-      item_id: 'id',
-    },
+    body: JSON.stringify({
+      item_id: id,
+    }),
   });
   const res = response.json();
   return res;
