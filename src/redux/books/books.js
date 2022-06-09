@@ -1,40 +1,23 @@
-import { v4 as uuidv4 } from 'uuid';
-
+import { getApiData, addApiData, deleteApiData } from '../helpers/APIdata';
 // Actions
+const BOOKS_DEFAULT = 'bookstore/books/BOOKS_DEFAULT';
 const ADDNEW = 'bookstore/books/ADDNEW';
 const DELETE = 'bookstore/books/REMOVE';
-const books = [
-  {
-    id: uuidv4(),
-    category: 'Action',
-    title: 'The Hunger Games',
-    author: 'Suzanne Collins',
-  },
-  {
-    id: uuidv4(),
-    category: 'Science Fiction',
-    title: 'Dune',
-    author: 'Frank Herbert',
-  },
-  {
-    id: uuidv4(),
-    category: 'Economy',
-    title: 'Capital in the Twenty-First Century',
-    author: 'Suzanne Collins',
-  },
-];
 
 // Reducer
-export default function reducer(state = books, action = {}) {
+export default function reducer(state = [], action = {}) {
   switch (action.type) {
+    case BOOKS_DEFAULT:
+      return action.payload;
+
     case ADDNEW:
       return [
         ...state,
-        action.book,
+        action.payload,
       ];
 
     case DELETE:
-      return [...state.filter((book) => (book.id !== action.id))];
+      return [...state.filter((book) => (book.id !== action.payload))];
 
     default:
       return state;
@@ -42,10 +25,23 @@ export default function reducer(state = books, action = {}) {
 }
 
 // Action Creators
+export function getAllBooks() {
+  return async (dispatch) => {
+    const books = await getApiData();
+    dispatch({ type: BOOKS_DEFAULT, payload: books });
+  };
+}
+
 export function addBook(book) {
-  return { type: ADDNEW, book };
+  return async (dispatch) => {
+    await addApiData(book);
+    dispatch({ type: ADDNEW, payload: book });
+  };
 }
 
 export function deleteBook(id) {
-  return { type: DELETE, id };
+  return async (dispatch) => {
+    await deleteApiData(id);
+    dispatch({ type: DELETE, payload: id });
+  };
 }
