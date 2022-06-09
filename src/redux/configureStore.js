@@ -9,11 +9,9 @@ const reducers = combineReducers({
   reducerC: reducerCategories,
 });
 
-const middleware = [thunk];
-
 const store = createStore(
   reducers,
-  composeWithDevTools(applyMiddleware(...middleware)),
+  composeWithDevTools(applyMiddleware(thunk)),
 );
 
 export default store;
