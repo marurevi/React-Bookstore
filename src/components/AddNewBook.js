@@ -23,6 +23,7 @@ export default function AddNewBook() {
       title,
       author,
     }));
+
     clearInput();
   };
 
@@ -43,16 +44,7 @@ export default function AddNewBook() {
       <h2>ADD NEW BOOK</h2>
       <form onSubmit={handleSubmit}>
         <input type="text" name="addNew" placeholder="Book Title" onChange={handleTitleChange} required />
-        <select name="author" onChange={handleAuthorChange}>
-          <option value="" defaultValue>Author</option>
-          <option value="Susan Collins">Susan Collin</option>
-          <option value="Dan Brown">Dan Brown</option>
-          <option value="Wilbour Smith">Wilbour Smith</option>
-          <option value="Artur Harley">Artur Harley</option>
-          <option value="Isaac Asimov">Isaac Asimov</option>
-          <option value="Sidney Sheldon">Sidney Sheldon</option>
-          <option value="Frank Herbert">Frank Herbert</option>
-        </select>
+        <input type="text" name="author" placeholder="Author" onChange={handleAuthorChange} required />
         <select name="categoryr" onChange={handleCategoryChange}>
           <option value="" defaultValue>Category</option>
           <option value="Economy">Economy</option>

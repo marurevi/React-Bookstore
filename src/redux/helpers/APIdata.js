@@ -1,6 +1,7 @@
+/* eslint-disable camelcase */
 const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/';
 const ID = 'KYzsKkgvhqr8KHkbtPuZ';
-const urlAPI = `${url + ID}/books`;
+const urlAPI = `${url + ID}/books/`;
 
 const getApiData = async () => {
   const response = await fetch(urlAPI, {
@@ -17,28 +18,24 @@ const getApiData = async () => {
 };
 
 const addApiData = async (book) => {
-  const response = await fetch(urlAPI, {
+  await fetch(urlAPI, {
     method: 'POST',
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
     body: JSON.stringify({
       item_id: book.id,
       title: book.title,
       author: book.author,
       category: book.category,
     }),
-  });
-  const res = response.json();
-  return res;
+  }).catch((error) => error.message);
 };
 
 const deleteApiData = async (id) => {
-  const response = await fetch(urlAPI + id, {
+  await fetch(urlAPI + id, {
     method: 'DELETE',
-    body: JSON.stringify({
-      item_id: id,
-    }),
-  });
-  const res = response.json();
-  return res;
+  }).catch((error) => error.message);
 };
 
 export { getApiData, addApiData, deleteApiData };

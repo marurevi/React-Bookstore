@@ -1,4 +1,4 @@
-import { getApiData } from '../helpers/APIdata';
+import { getApiData, addApiData, deleteApiData } from '../helpers/APIdata';
 // Actions
 const BOOKS_DEFAULT = 'bookstore/books/BOOKS_DEFAULT';
 const ADDNEW = 'bookstore/books/ADDNEW';
@@ -33,9 +33,15 @@ export function getAllBooks() {
 }
 
 export function addBook(book) {
-  return { type: ADDNEW, payload: book };
+  return async (dispatch) => {
+    await addApiData(book);
+    dispatch({ type: ADDNEW, payload: book });
+  };
 }
 
 export function deleteBook(id) {
-  return { type: DELETE, payload: id };
+  return async (dispatch) => {
+    await deleteApiData(id);
+    dispatch({ type: DELETE, payload: id });
+  };
 }
