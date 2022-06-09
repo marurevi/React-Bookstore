@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Bookstore: Use Redux in React components.
+# Bookstore: connect to API
 
 >The Bookstore is a website similar to the "Awesome Books" website built in the previous module. You will create an MVP version of it that allows you to:
 
@@ -8,7 +8,7 @@
 - Add a book.
 - Remove a selected book.
 
->In this step, I added some UI elements to my components and make them dispatch actions.
+>In this step, I connected your React-Redux application to an existing API to create and remove books in a remote server.
 
 <p align="center">
   <img src="https://github.com/microverseinc/curriculum-react-redux/raw/main/bookstore/images/bookstore.png" alt="Core elements" width="450px"  />
