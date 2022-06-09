@@ -7,7 +7,7 @@ import AddNewBook from './AddNewBook';
 
 export default function Books() {
   const booksArray = useSelector((state) => state.reducerB);
-
+  
   return (
     <div>
       <Navigator />

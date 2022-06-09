@@ -5,15 +5,11 @@ import Books from './components/Books';
 import Categories from './components/Categories';
 import './App.css';
 import { getAllBooks } from './redux/books/books';
-import store from './redux/configureStore';
-import { getApiData } from './redux/helpers/APIdata.js';
 
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
-    getApiData().then((res) => (
-      store.dispatch(getAllBooks(res))
-    ));
+    dispatch(getAllBooks());
   }, [dispatch]);
   return (
     <div className="App">

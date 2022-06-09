@@ -1,3 +1,4 @@
+import { getApiData } from '../helpers/APIdata';
 // Actions
 const BOOKS_DEFAULT = 'bookstore/books/BOOKS_DEFAULT';
 const ADDNEW = 'bookstore/books/ADDNEW';
@@ -7,10 +8,7 @@ const DELETE = 'bookstore/books/REMOVE';
 export default function reducer(state = [], action = {}) {
   switch (action.type) {
     case BOOKS_DEFAULT:
-      return [
-        ...state,
-        action.payload,
-      ];
+      return action.payload;
 
     case ADDNEW:
       return [
@@ -27,8 +25,11 @@ export default function reducer(state = [], action = {}) {
 }
 
 // Action Creators
-export function getAllBooks(books) {
-  return { type: BOOKS_DEFAULT, payload: books };
+export function getAllBooks() {
+  return async (dispatch) => {
+    const books = await getApiData();
+    dispatch({ type: BOOKS_DEFAULT, payload: books });
+  };
 }
 
 export function addBook(book) {
