@@ -40,8 +40,18 @@ nav > *:focus {
   background-color: whitesmoke;
 }
 
+button {
+  height: 2.063rem;
+  margin: 0.75rem 0 0.563rem 3.688rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  background-color: #0290ff;
+}
+
 .book-section button {
-  width:  15rem;
+  width: 15rem;
   margin-right: 2rem;
 }
 
@@ -59,16 +69,6 @@ nav > *:focus {
   text-align: start;
   padding: 1.688rem;
   width: 30%;
-}
-
-button {
-  height: 2.063rem;
-  margin: 0.75rem 0 0.563rem 3.688rem;
-  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
-  border-radius: 5px;
-  color: white;
-  border: none;
-  background-color: #0290ff;
 }
 
 .circle-container {
@@ -110,10 +110,11 @@ select {
 }
 
 .newTask-container button {
-  width:  11.5rem;
+  width: 11.5rem;
   justify-self: end;
   margin-right: 2rem;
 }
+
 .btn-container {
   display: flex;
   align-items: center;
@@ -148,7 +149,7 @@ select {
 .text-title {
   font-family: 'RobotoSlab', sans-serif;
   font-weight: 700;
-  font-size: 1.375rem;  
+  font-size: 1.375rem;
 }
 
 .text-author {
@@ -157,4 +158,3 @@ select {
   font-size: 0.875rem;
   color: #4386bf;
 }
-
