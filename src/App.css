@@ -11,7 +11,7 @@ nav {
   padding: 2em;
 }
 
-nav > * {
+nav > div > * {
   margin: 0 2em;
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
@@ -21,7 +21,7 @@ nav > * {
   color: #121212;
 }
 
-nav > *:focus {
+nav > div > *:focus {
   margin: 0 2em;
   color: #121212;
 }
