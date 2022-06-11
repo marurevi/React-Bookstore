@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Bookstore: connect to API
+# Bookstore
 
 >The Bookstore is a website that allows you to: Display a list of books. Add a book. Remove a selected book. All the data is saved in an external API . This project has been built with React and Redux.
 
