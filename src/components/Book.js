@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import { CircularProgressBar } from '@tomik23/react-circular-progress-bar';
 import { deleteBook } from '../redux/books/books';
 
 export default function Book({
@@ -11,9 +12,9 @@ export default function Book({
   return (
     <div className="container">
       <ul>
-        <li>{category}</li>
-        <li>{title}</li>
-        <li>{author}</li>
+        <li className="text-category">{category}</li>
+        <li className="text-title">{title}</li>
+        <li className="text-author">{author}</li>
         <li className="btn-container">
           <button type="button" disabled>COMENTS</button>
           |
@@ -22,7 +23,23 @@ export default function Book({
           <button type="button" disabled>EDIT</button>
         </li>
       </ul>
-      <button type="button">UPDATE PROGRESS</button>
+      <div className="circle-container">
+        <CircularProgressBar
+          animationSmooth="1s ease-out"
+          colorCircle="#f1f1f1"
+          colorSlice="#FF6D00"
+          percent={Math.floor(Math.random() * 100) + 15}
+          linearGradient={['#379cf6', '#307bbe']}
+          size={200}
+        />
+      </div>
+      <div className="update-container">
+        <h3>
+          CHAPTER:
+          <span>{Math.floor(Math.random() * 60) + 3}</span>
+        </h3>
+        <button type="button">UPDATE PROGRESS</button>
+      </div>
     </div>
   );
 }
