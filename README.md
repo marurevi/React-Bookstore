@@ -1,23 +1,68 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+<a name="readme-top"></a>
 
-# Bookstore
+<div align="center">
 
->The Bookstore is a website that allows you to: Display a list of books. Add a book. Remove a selected book. All the data is saved in an external API . This project has been built with React and Redux.
+  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
+
+  <h3><b>Microverse README Template</b></h3>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+
+# 📗 Table of Contents
+
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+- [👥 Authors](#authors)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
+
+<!-- PROJECT DESCRIPTION -->
+
+# 📖 Bookstore <a name="about-project"></a>
+
+**Bookstore** is a website that allows you to: Display a list of books. Add a book. Remove a selected book. All the data is saved in an external API . This project has been built with React and Redux.
 
 <p align="center">
   <img src="bookstore.png" alt="Core elements" width="450px"  />
 </p>
 
-## Built With
+## 🛠 Built With <a name="built-with"></a>
 
-- Major languages: HTML, CSS & JavaScript
-- Frameworks: React
+### Tech Stack <a name="tech-stack"></a>
 
-## Live Demo
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://react-redux.js.org/">Redux</a></li>
+  </ul>
+</details>
 
-[Live Demo](https://marurevi-bookstore.herokuapp.com/)
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://webpack.js.org/">Webpack.js</a></li>
+  </ul>
+</details>
 
-# Getting Started with Create React App
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo](https://react-bookstore-marurevi.netlify.app/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -31,7 +76,11 @@ In the project directory, you can clone the repository with the following link:
  to install all the dependencies that you need.
  Then you can run a live version with the command `npm start`.
 
-## Author
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
 
 👤 **Mariana Revilla Lérida**
 
@@ -39,23 +88,40 @@ In the project directory, you can clone the repository with the following link:
 - Twitter: [@MaruRevilla](https://twitter.com/MaruRevilla)
 - LinkedIn: [Mariana-Revilla-Lérida](https://linkedin.com/in/mariana-revilla-l%C3%A9rida-a12aba143)
 
-## 🤝 Contributing
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
-## Show your support
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+<!-- ACKNOWLEDGEMENTS -->
 
-## 📝 License
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-This project is [MIT](./LICENCE) licensed.
+> Give credit to everyone who inspired your codebase.
 
+I would like to thank...
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
